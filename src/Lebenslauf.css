@@ -1,0 +1,218 @@
+.lebenslauf-container {
+  background-color: #000;
+  color: white;
+  height: 150%;
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between; /*logo links und nav rechts*/
+  align-items: center;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  color: red;
+  margin-left: 30px;
+}
+
+.nav-links {
+   
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links li a.active {
+  color: red; /* nav wird rot falls activ*/
+}
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;            /*redline am Anfang existiert nicht*/
+  background: red;
+  transition: width 0.3s ease-in-out; /*Animation nav*/
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+.download-section {
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.download-btn {
+  background-color: rgb(255, 6, 6);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  background-color: white;
+  color: red;
+}
+
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.section {
+  width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.section h2 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+
+.section ul {
+   list-style: none;
+   padding-left: 0;
+}
+
+.section li {
+    color: rgb(0, 247, 255);
+   margin-bottom: 12px;
+    line-height: 1.5rem;
+}
+
+.section p {
+    margin-left: 180px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Tablettes */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 14px 20px;               /* plus compact */
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 32px;                  /* ↓ taille logo */
+    margin-left: 10px;
+  }
+
+  .nav-links {
+    gap: 1.2rem;                      /* ↓ espace entre liens */
+    flex-wrap: wrap;
+  }
+
+  .section {
+    width: 90%;                       /* cartes plus fluides */
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  /* Navbar en 2 colonnes: logo (auto) | nav (1fr) */
+  .navbar {
+    position: sticky;                 /* reste en haut au scroll (mieux que absolute) */
+    top: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;  /* logo + nav qui prend tout l'espace */
+    align-items: center;
+    padding: 10px 12px;
+    background: #000;                 /* fond solide sous la navbar */
+    z-index: 10;
+  }
+
+  .logo {
+    font-size: 22px;                  /* 👈 beaucoup plus petit sur mobile */
+    margin-left: 0;
+    line-height: 1;
+  }
+
+  .nav-links {
+    justify-self: end;                /* pousse les liens à droite */
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;                  /* passe à la ligne si trop serré */
+  }
+
+  .nav-links li a {
+    font-size: 0.95rem;               /* liens un peu plus petits */
+  }
+
+  .download-section {
+    padding-top: 70px;                /* espace sous navbar */
+  }
+
+  .sections {
+    gap: 24px;
+    padding: 0 12px;                  /* marge latérale */
+  }
+
+  .section {
+    width: 100%;                      /* pleine largeur */
+    padding: 16px;
+  }
+
+  .section p {
+    margin-left: 0;                   /* évite le décalage sur mobile */
+  }
+}
+
+/* Très petits écrans (optionnel) */
+@media (max-width: 380px) {
+  .nav-links {
+    gap: 0.6rem;
+  }
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+  .logo {
+    font-size: 20px;
+  }
+}

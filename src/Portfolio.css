@@ -1,0 +1,207 @@
+.portfolio-container {
+  background-color: black;
+  min-height: 100vh;
+  
+  padding-top: 150px;
+  padding-bottom: 40px;
+  color: white;
+  position: relative;
+}
+
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  color: red;
+  margin-left: 30px;
+}
+
+.nav-links {
+  margin-right: 50px;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links li a.active {
+  color: red;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: red;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+.project-card {
+  background: linear-gradient(to top, rgba(128, 35, 35, 0.8), rgba(8, 169, 201, 0.705));
+  border-radius: 10px;
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+  
+  position: relative;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgb(0, 217, 255);
+}
+
+.project-card img {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+}
+
+.project-card h3 {
+   
+  margin-left: 10px;
+  margin-top: 2px;
+  font-size: 1.1rem;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 0 10px;
+  margin-top: 0px;
+}
+
+/* card wenn geklickt (betrifft den inhalt*/
+.project-card.active {
+    text-align: center;
+  width: 70vw;
+  height: auto;
+  min-height: 400px;
+  background: #1a1a1a;
+  z-index: 2;
+  box-shadow: 0 0 30px red;
+  position: absolute; /*centrer au milieu du Bildschirm*/
+  
+}
+
+.project-card.hide {
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s ease;
+}
+
+.project-card.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* inhalt dans card*/
+.project-content {
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.videoo{
+     max-height: 400px; /* max Länge von Videos, nicht möcglich in <video ...> */
+     object-fit: contain; /* ou 'cover' selon l'effet voulu */
+    
+}
+
+.screenshots {
+  display: flex;
+  gap: 30px; /* espace zwischen Bilder */
+  flex-wrap: wrap; 
+}
+
+.screenshots img {
+  width: 600px; 
+  height: auto;
+  object-fit: cover;
+ 
+}
+
+.github-link img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s;
+}
+
+.github-link img:hover {
+  transform: scale(1.2);
+}
+
+.close-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: white;
+  color: red;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .project-card {
+    width: 90%;
+  }
+
+  .projects-grid {
+    gap: 1rem;
+  }
+}

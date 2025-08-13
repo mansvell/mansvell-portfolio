@@ -1,0 +1,70 @@
+
+.zertifikate-container {
+     display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;    /*augmente la page pour le scroll de souris*/
+ max-height: 100vh;
+   width: 100vw;
+  padding-top: 150px;
+  padding-bottom: 40px;
+  background: linear-gradient(-45deg, #000, #240101, #000, #111);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite; /*Dauer dun cycle complet,transition douce,en boucle*/
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between; /*logo links und nav rechts*/
+  align-items: center;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  color: red;
+  margin-left: 30px;
+}
+
+.nav-links {
+   margin-right: 50px;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links li a.active {
+  color: red; /* nav wird rot falls activ*/
+}
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;            /*redline am Anfang existiert nicht*/
+  background: red;
+  transition: width 0.3s ease-in-out; /*Animation nav*/
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
