@@ -51,13 +51,13 @@ export default function UeberM() {
   { name: 'Datenbank', percent: 80 },
   { name: 'React.js', percent: 70 },
   { name: 'Vert.X (Backend)', percent: 80 },
-  { name: 'Git & GitHub', percent: 70 },
+  { name: 'Git & GitHub', percent: 80 },
+  { name: 'Docker', percent: 70 },
   { name: 'Jetpack Compose', percent: 80 },
   { name: 'Betriebsystem: Windows/Linux', percent: 70 },
   { name: 'Bootstrap/Framework', percent: 75 },
   { name: 'LaTeX', percent: 70 },
   { name: 'Markdown', percent: 80 },
-  { name: 'PlantUML', percent: 70 },
 ];
 
     const [animateBars, setAnimateBars] = useState(false); 

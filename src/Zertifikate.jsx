@@ -3,7 +3,7 @@ import React, { useState,useEffect} from 'react'; /*useEffect wird mir helfen, d
 import {NavLink} from 'react-router-dom';
 import zert1 from './assets/ExamDocker.png'
 import zert2 from './assets/git.png'
-//import zert4 from './assets/react.png'*/
+import zert4 from './assets/react.png'
 import zert3 from './assets/dockerComp.png'
 
 
@@ -35,6 +35,16 @@ const zertifs=[
            <a href='https://www.linkedin.com/learning/certificates/133bce8f943e6cadf904598cd9c33d47bc89097261d70b3df7e750e7b50ee479?trk=share_certificate'>Zertifikat in LINKEDIN überprüfen</a>
         </div>)
     },
+    { 
+      id: 4,
+      src: zert4,
+      link: (
+        <div style={{background:'red', padding:'10px', color:'white'}}>
+           <a href='https://www.linkedin.com/learning/certificates/a4ba26d643a4e09eb077f2baf4cf28e6371fc628094514fe7365e8fadec2df16?trk=share_certificate'>Zertifikat in LINKEDIN überprüfen</a>
+        </div>
+        
+      )
+      },
     
   ];
 export default function Zertifikate() {

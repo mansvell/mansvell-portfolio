@@ -88,6 +88,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+ position: relative;
   gap: 50px;
   animation: fadeIn 1.5s ease-in-out;
 }
@@ -135,22 +136,22 @@
 /* Tablettes */
 @media (max-width: 1024px) {
   .navbar {
-    padding: 14px 20px;               /* plus compact */
+    padding: 14px 20px;           
     gap: 12px;
   }
 
   .logo {
-    font-size: 32px;                  /* ↓ taille logo */
+    font-size: 32px;                 
     margin-left: 10px;
   }
 
   .nav-links {
-    gap: 1.2rem;                      /* ↓ espace entre liens */
+    gap: 1.2rem;                    
     flex-wrap: wrap;
   }
 
   .section {
-    width: 90%;                       /* cartes plus fluides */
+    width: 90%;                      
   }
 }
 
@@ -158,52 +159,44 @@
 @media (max-width: 768px) {
   /* Navbar en 2 colonnes: logo (auto) | nav (1fr) */
   .navbar {
-    position: sticky;                 /* reste en haut au scroll (mieux que absolute) */
+    position: sticky;                
     top: 0;
     display: grid;
-    grid-template-columns: auto 1fr;  /* logo + nav qui prend tout l'espace */
+    grid-template-columns: auto 1fr;  
     align-items: center;
     padding: 10px 12px;
-    background: #000;                 /* fond solide sous la navbar */
+    background: #000;                 
     z-index: 10;
   }
 
   .logo {
-    font-size: 22px;                  /* 👈 beaucoup plus petit sur mobile */
+    font-size: 22px;                  
     margin-left: 0;
     line-height: 1;
   }
 
   .nav-links {
-    justify-self: end;                /* pousse les liens à droite */
-    display: flex;
+    justify-self: end;               
     align-items: center;
     gap: 0.9rem;
-    flex-wrap: wrap;                  /* passe à la ligne si trop serré */
+    flex-wrap: wrap;                 
   }
 
   .nav-links li a {
-    font-size: 0.95rem;               /* liens un peu plus petits */
+    font-size: 0.95rem;              
+
+  .download-section { padding-top: 70px;                
   }
 
-  .download-section {
-    padding-top: 70px;                /* espace sous navbar */
+  .sections {gap: 24px; padding: 0 12px;                  
   }
 
-  .sections {
-    gap: 24px;
-    padding: 0 12px;                  /* marge latérale */
+  .section {width: 100%;   padding: 16px;
   }
 
-  .section {
-    width: 100%;                      /* pleine largeur */
-    padding: 16px;
+  .section p {margin-left: 0;                   
   }
-
-  .section p {
-    margin-left: 0;                   /* évite le décalage sur mobile */
-  }
-}
+}}
 
 /* Très petits écrans (optionnel) */
 @media (max-width: 380px) {
