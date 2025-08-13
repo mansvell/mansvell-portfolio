@@ -87,7 +87,8 @@ export default function UeberM() {
                     width: animateBars ? `${skill.percent}%` : '0%',
                     transition: 'width 1s ease-in-out'
                     }}
-                  ></div>
+                   > 
+                  </div>
                  </div>
                 </div>
              ))}

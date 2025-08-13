@@ -55,10 +55,7 @@ export default function Lebenslauf() {
                  <p>° Aufbau eines Compilers mithilfe von JAVA, KOTLIN ,CUP </p>
           </ul>
           <h2 style={{textAlign:'center'}}><u> - Berufserfahrungen</u> -</h2>
-            <ul>
-                <li><strong style={{color:'red'}}>../....-../.... :</strong>...</li>
-                <p>°...</p>
-            </ul>
+            <p>...  </p>
         </div>
       </div>
     </div>
