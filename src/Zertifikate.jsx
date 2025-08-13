@@ -54,7 +54,7 @@ export default function Zertifikate() {
             </ul>
           </nav>
 
-          <h3 className="zertifikate-intro"> Diese zertifikate habe ich auf Online Plattform wie LinkedIn bekommen, um meine Kenntnisse zu erweitern</h3>
+          <h3 className="zertifikate-intro"> Diese Zertifikate habe ich auf Online Plattform wie LinkedIn bekommen, um meine Kenntnisse zu erweitern</h3>
 
       <section className="cert-grid">
         {zertifs.map((c, i) => (
@@ -71,7 +71,7 @@ export default function Zertifikate() {
         ))}
       </section>
 
-      {/* Lightbox */}
+     
       {openIndex !== null && (
         <div
           className="lightbox"

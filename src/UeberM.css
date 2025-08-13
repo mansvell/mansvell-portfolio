@@ -2,10 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;    /*augmente la page pour le scroll de souris*/
- 
-   width: 100vw;
-  padding-top: 150px;
+  width: 100%;              /* évite 100vw pour ne pas créer de scroll horizontal */
+  min-height: 100dvh;       /* occupe au moins toute la hauteur d’écran */
+  padding-top: 110px;       /* adapte à la hauteur réelle de ta navbar */
   padding-bottom: 40px;
   background-color: #000000;
 }

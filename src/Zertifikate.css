@@ -1,12 +1,11 @@
 
 .zertifikate-container {
-     display: flex;
-  justify-content: center;
-  
-  min-height: 90vh;    /*augmente la page pour le scroll de souris*/
- max-height: 100vh;
-   width: 100vw;
-  padding-top: 150px;
+   display: flex;
+  flex-direction: column;   /*pour mettre le h3 puis la grille */
+  align-items: center;  
+  width: 100%;              /* évite 100vw pour ne pas créer de scroll horizontal */
+  min-height: 100dvh;       /* occupe au moins toute la hauteur d’écran */
+  padding-top: 110px;       /* adapte à la hauteur réelle de ta navbar */
   padding-bottom: 40px;
   background: linear-gradient(-45deg, #000, #240101, #000, #111);
   background-size: 400% 400%;
@@ -59,7 +58,7 @@
   bottom: -4px;
   left: 0;
   height: 2px;
-  width: 0;            /*redline am Anfang existiert nicht*/
+  width: 0;            
   background: red;
   transition: width 0.3s ease-in-out; /*Animation nav*/
 }
@@ -71,29 +70,27 @@
 
 .zertifikate-intro {
   color: #fff;
-  max-width: 1100px;
-  margin: 0 auto 24px auto;
+  margin: 50px auto 24px;
   padding: 0 16px;
   text-align: center;
   line-height: 1.4;
+  max-width: 1100px;
+  width: 100%;
 }
 
-/* grille responsive */
 .cert-grid {
   width: 100%;
-  height:350px;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px;     /* limite la largeur sur grands écrans */
+  margin: 0 auto;        /* centre la grille */
   padding: 0 16px;
   display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+  grid-template-columns: 1fr;     /* par défaut : 1 colonne (téléphones) */
 }
-@media (min-width: 600px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 900px) { .cert-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 1200px){ .cert-grid { grid-template-columns: repeat(4, 1fr); } }
 
-/* cards */
+
+  
+
 .cert-card {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.12);
@@ -105,6 +102,7 @@
   box-shadow: 0 6px 12px rgba(252, 1, 1, 0.897);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
+
 .cert-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(1, 166, 207, 0.836);
@@ -118,6 +116,7 @@
   cursor: zoom-in;
   border-radius: 12px;
   overflow: hidden;
+  aspect-ratio: 3 / 4;
 }
 .cert-img-btn img {
   display: block;
@@ -154,3 +153,24 @@
 }
 
 
+@media (max-width: 480px) {
+  .zertifikate-container { padding-top: 95px; }   /* un peu moins sous la nav */
+  .zertifikate-intro { margin-bottom: 30px; padding: 0 12px; font-size: .95rem; }
+  .cert-grid { gap: 14px; padding: 0 12px; }
+  .cert-card { padding: 6px; }
+  .cert-img-btn { aspect-ratio: 2 / 3 }         
+}
+/* ≥ 600px : 2 colonnes (petites tablettes) */
+@media (min-width: 600px) {
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ≥ 768px : 3 colonnes (tablettes) */
+@media (min-width: 768px) {
+  .cert-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ≥ 1200px : 4 colonnes (desktop large) */
+@media (min-width: 1200px) {
+  .cert-grid { grid-template-columns: repeat(4, 1fr); }
+}

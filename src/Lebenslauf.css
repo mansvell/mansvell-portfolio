@@ -2,6 +2,7 @@
   background-color: #000;
   color: white;
   height: 150%;
+  min-height: 100dvh; 
   font-family: Arial, sans-serif;
   padding-top: 80px;
   padding-bottom: 40px;
