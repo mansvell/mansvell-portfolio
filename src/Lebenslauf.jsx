@@ -8,7 +8,7 @@ export default function Lebenslauf() {
         <div className="logo">MnK<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmN6dHdwMGNzcTZnbzU2ZTBmeXpjYXg5d2QzdWVyaWY1dm40c2cxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yfPmYMIsbeuRP8odz0/giphy.gif" alt="smile" width="40" height="40" /></div>
         <ul className="nav-links">
           <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/über-mich">Über mich</NavLink></li>
+          <li><NavLink to="/ueber-mich">Über mich</NavLink></li>
           <li><NavLink to="/zertifikate">Zertifikate</NavLink></li>
           <li><NavLink to="/lebenslauf" end>Lebenslauf</NavLink></li>
           <li><NavLink to="/portfolio">Portfolio</NavLink></li>
