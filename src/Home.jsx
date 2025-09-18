@@ -53,7 +53,7 @@ export default function Home() {
         
       <div className="overlay-dark"></div>
       <div className="foot">
-          <footer>©2025Copyright: Mansvell NK. | Alle Rechte vorbehalten  |  Letzte Aktualisierung:13.08</footer>
+          <footer>©2025 Copyright: Mansvell NK. | Alle Rechte vorbehalten  |  Letzte Aktualisierung:08.09</footer>
         </div>
     </div>
     

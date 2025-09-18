@@ -200,7 +200,7 @@ const projects = [
     description: (
         <div>
            <p>Ibitak ist ein Pokemon(Vögel). In diesem kleinen Projekt sind die Behandlung von MVC-Struktur und Kollisionen sehr wichtig, viele Ibitak fliegen und
-               wenn ein Ibitak dn Kopf eines anderen berührt ,verschwindet dieser berührte Ibitak direkt. </p>
+               wenn ein Ibitak den Kopf eines anderen berührt ,verschwindet dieser berührte Ibitak direkt. </p>
             <p><u>| Einzelprojekt |</u> </p>
            <div >
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}> JAVA, processing</span> </h3>
