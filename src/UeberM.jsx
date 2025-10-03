@@ -60,7 +60,7 @@ export default function UeberM() {
   { name: 'Markdown', percent: 80 },
 ];
 
-    const [animateBars, setAnimateBars] = useState(false); 
+    const [animateBars, setAnimateBars] = useState(false); /* am Anfang vide puis se erfüllen*/
 
  useEffect(() => {
   if (activeCard === 'skills') {
@@ -141,7 +141,7 @@ const cards = [
         {cards.map((card) =>(
           <div
             key={card.id}
-            className={`card ${activeCard === null ? 'show' : activeCard === card.id ? 'active' : 'hide'}`}
+            className={`card ${activeCard === null ? 'show' : activeCard === card.id ? 'active' : 'hide'}`}/* show => montre les elemt de le liste*/
             onClick={() => setActiveCard(card.id)}>
           
             <h2>{card.title}</h2>

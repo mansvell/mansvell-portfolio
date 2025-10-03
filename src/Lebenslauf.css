@@ -1,18 +1,17 @@
 .lebenslauf-container {
   background-color: #000;
-  color: white;
-  height: 150%;
-  min-height: 100dvh; 
-  font-family: Arial, sans-serif;
-  padding-top: 80px;
+  color: white; /* ici je ne definis pas le height et width pour ne pas les fixer une limite 
+                             , meme quand lecran change de dimension*/
+  padding-top: 110px;
   padding-bottom: 40px;
 }
+
 
 .navbar {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px 5px;
   display: flex;
   justify-content: space-between; /*logo links und nav rechts*/
   align-items: center;
@@ -27,7 +26,7 @@
 }
 
 .nav-links {
-   
+   margin-right: 50px;
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -61,7 +60,7 @@
 
 .download-section {
   text-align: center;
-  padding-top: 80px;
+  padding-top: 100px;
   margin-bottom: 40px;
   animation: fadeIn 1s ease-in-out;
 }
@@ -119,7 +118,7 @@
 }
 
 .section p {
-    margin-left: 180px;
+    margin-left: 20px;
 }
 
 /* Animation */
@@ -136,18 +135,15 @@
 /* Tablettes */
 @media (max-width: 1024px) {
   .navbar {
-    padding: 14px 20px;           
-    gap: 12px;
+    padding: 14px 20px; gap: 12px;
   }
 
   .logo {
-    font-size: 32px;                 
-    margin-left: 10px;
+    font-size: 50px;  margin-left: 10px;
   }
 
   .nav-links {
-    gap: 1.2rem;                    
-    flex-wrap: wrap;
+    gap: 1.2rem; flex-wrap: wrap;
   }
 
   .section {
@@ -170,17 +166,17 @@
   }
 
   .logo {
-    font-size: 22px;                  
+    font-size: 50px;                  
     margin-left: 0;
     line-height: 1;
   }
 
-  .nav-links {
-    justify-self: end;               
-    align-items: center;
-    gap: 0.9rem;
-    flex-wrap: wrap;                 
-  }
+.nav-links {
+        margin-right: 50px;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
 
   .nav-links li a {
     font-size: 0.95rem;              
@@ -198,15 +194,4 @@
   }
 }}
 
-/* Très petits écrans (optionnel) */
-@media (max-width: 380px) {
-  .nav-links {
-    gap: 0.6rem;
-  }
-  .nav-links li a {
-    font-size: 0.9rem;
-  }
-  .logo {
-    font-size: 20px;
-  }
-}
+

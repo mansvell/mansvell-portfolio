@@ -6,7 +6,6 @@ import './index.css';
 import UeberM from './UeberM.jsx';
 import Lebenslauf from './Lebenslauf.jsx';
 import Zertifikate from './Zertifikate.jsx';
-
 import Portfolio from './Portfolio.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

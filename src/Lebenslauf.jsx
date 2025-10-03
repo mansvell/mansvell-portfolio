@@ -16,7 +16,7 @@ export default function Lebenslauf() {
       </nav>
 
       <div className="download-section">
-        <h3>📄 Lebenslauf herunterladen: </h3> 
+        <h3> Lebenslauf herunterladen: </h3> 
         <a className="download-btn"  href="/Lebenslauf-NK.pdf"  download="Lebenslauf-NK.pdf" > Download  </a>
       </div> 
 
@@ -34,11 +34,11 @@ export default function Lebenslauf() {
                     <p>°  Konzepte systemnaher Programmierung (C#)</p>
                     <p>° Algorithmen und Datenstrukturen </p>
             <li><strong style={{color:'red'}}> 10/2022 - 12/2022:</strong> EIFERT SPRACHZENTRUM (FRANKFURT)</li>
-                <p> <u> Abscluss:</u> Telc-Zertifikat C1 Hochschule</p>
+                <p> <u> Abschluss:</u> Telc-Zertifikat C1 Hochschule</p>
             <li><strong style={{color:'red'}}>12/2020 - 04/2022:</strong>GOETHE INSTITUT SPRACHSCHULE  (KAMERUN)</li>
-                <p> <u> Abscluss:</u>  Goethe-Zertifikat A1, A2, B1, B2</p>
+                <p> <u> Abschluss:</u>  Goethe-Zertifikat A1, A2, B1, B2</p>
             <li><strong style={{color:'red'}}> 09/2012 - 07/2020:</strong>BILINGUALES GYMNASIUM VON MENDONG </li>
-                <p><u> Abscluss:</u> Abitur mit Schwerpunkt: Mathematik, Physik, und Naturwissenschaft</p>
+                <p><u> Abschluss:</u> Abitur mit Schwerpunkt: Mathematik, Physik, und Naturwissenschaft</p>
           </ul>
         </div>
 

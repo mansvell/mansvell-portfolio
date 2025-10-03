@@ -3,10 +3,9 @@
   justify-content: center;
   align-content: flex-start; /*important pour eviter les depacements du bas decran*/
   gap: 16px;
-  width: 100%;              /* évite 100vw pour ne pas créer de scroll horizontal */
-  min-height: 100dvh;       /* occupe au moins toute la hauteur d’écran */
+  width: 100vw;              
+  height: 100vh;        /* occupe au moins toute la hauteur d’écran */
   padding-top: 110px;       /* adapte à la hauteur réelle de ta navbar */
-  padding-bottom: 40px;
   background-color: #000000;
 }
 .navbar {
@@ -121,9 +120,9 @@ justify-content: center;
   margin-top: 5px;
   transform: none;
   box-shadow: 0 0 30px red;
-  position: relative;       /*pour vermeiden les depacements decran*/
+  position: absolute;       /*absolute give une position definitive au card (centre)*/
   z-index: 2;
-
+padding: 20px;
 }
 
 .card.hide {

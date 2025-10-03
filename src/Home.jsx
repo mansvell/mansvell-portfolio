@@ -1,5 +1,4 @@
 import './Home.css';
-import dragon from './assets/dragon1.webp'; // image background
 import Typewriter from 'typewriter-effect';
 import { NavLink } from 'react-router-dom';
 import githubIcon from './assets/gitIcon.png'; 
@@ -7,16 +6,7 @@ import linkedIn from './assets/inlogo.webp'
 
 export default function Home() {
   return (
-    <div
-      className="home-page"
-      style={{
-        backgroundImage: `url(${dragon})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      
+    <div className="home-page">
       <nav className="navbar">
         <div className="logo">MnK<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmN6dHdwMGNzcTZnbzU2ZTBmeXpjYXg5d2QzdWVyaWY1dm40c2cxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yfPmYMIsbeuRP8odz0/giphy.gif" alt="smile" width="40" height="40" /></div>
         <ul className="nav-links">
@@ -30,7 +20,7 @@ export default function Home() {
 
       
       <div className="content">
-        <h2 style={{ color: 'red', marginBottom:'50px' }}>Hallo,  Herzlich Willkommen !<br/>
+        <h2 style={{ color: 'red', marginBottom:'20px' }}>Hallo,  Herzlich Willkommen !<br/>
             ich bin<span style={{ color: 'white' }}>
           <Typewriter
             options={{
@@ -51,9 +41,8 @@ export default function Home() {
         
       </div>
         
-      <div className="overlay-dark"></div>
       <div className="foot">
-          <footer>©2025 Copyright: Mansvell NK. | Alle Rechte vorbehalten  |  Letzte Aktualisierung:08.09</footer>
+          <footer>©2025 Copyright: Mansvell NK. | Alle Rechte vorbehalten  |  Letzte Aktualisierung:03.10</footer>
         </div>
     </div>
     
