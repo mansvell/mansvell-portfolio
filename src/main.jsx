@@ -11,15 +11,13 @@ import Portfolio from './Portfolio.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-<BrowserRouter>
+<BrowserRouter >
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/ueber-mich" element={<UeberM />} />
       <Route path="/lebenslauf" element={<Lebenslauf/> }/>
       <Route path="/portfolio" element={<Portfolio /> }/>
       <Route path="/zertifikate" element={<Zertifikate/>}/>
-      {/* fallback  */}
-      <Route path="*" element={<Home />} />
     </Routes>
   </BrowserRouter>
   </React.StrictMode>
