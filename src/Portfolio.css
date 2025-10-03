@@ -60,7 +60,15 @@
 .nav-links li a.active::after {
   width: 100%;
 }
-
+.menu-toggle {  /*pour le menu ☰*/
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;           
+  line-height: 1;
+  cursor: pointer;
+}
 
 .projects-grid {
   display: flex;
@@ -204,5 +212,44 @@
 
   .projects-grid {
     gap: 1rem;
+  }
+  /* montre le bouton 3 points, réduit un peu le padding de la navbar */
+  .navbar {
+    padding: 14px 16px;
+  }
+  .menu-toggle {
+    display: block;          /* ← visible sur mobile */
+    z-index: 5;
+  }
+
+  /* cache la nav horizontale par défaut et la transforme en panneau vertical */
+  .nav-links {
+    display: none;           /* ← cachée par défaut en mobile */
+    position: absolute;
+    top: 100%;               /* juste sous la navbar */
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    z-index: 4;
+  }
+
+  /* quand menuOpen = true → on affiche */
+  .nav-links.open {
+    display: flex;           /* ← s’affiche en colonne */
+  }
+
+  /* liens un peu plus grands et faciles à cliquer */
+  .nav-links li a {
+    padding: 10px 2px;
+    font-size: 1.02rem;
+  }
+
+  /* optionnel: underline moins agressif en vertical */
+  .nav-links li a::after {
+    bottom: -2px;
   }
 }

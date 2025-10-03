@@ -50,18 +50,26 @@ const zertifs=[
 export default function Zertifikate() {
         const [openIndex, setOpenIndex] = useState(null);
   
-
+const [menuOpen, setMenuOpen] = useState(false);
      return (
         <div className="zertifikate-container">
           <nav className="navbar">
             <div className="logo">MnK<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmN6dHdwMGNzcTZnbzU2ZTBmeXpjYXg5d2QzdWVyaWY1dm40c2cxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yfPmYMIsbeuRP8odz0/giphy.gif" alt="smile" width="40" height="40" /></div>
-            <ul className="nav-links">
-              <li><NavLink to="/" >Home</NavLink></li>
-              <li><NavLink to="/ueber-mich" >Über mich</NavLink></li>
-              <li><NavLink to="/zertifikate" end>Zertifikate</NavLink></li>
-              <li><NavLink to="/lebenslauf">Lebenslauf</NavLink></li>
-              <li><NavLink to="/portfolio">Portfolio</NavLink></li>
-            </ul>
+            <button
+          className="menu-toggle"
+          aria-label="Menü"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(v => !v)}
+        >
+          ☰
+        </button>
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <li><NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink></li>
+          <li><NavLink to="/ueber-mich" onClick={() => setMenuOpen(false)}>Über mich</NavLink></li>
+          <li><NavLink to="/zertifikate" onClick={() => setMenuOpen(false)}>Zertifikate</NavLink></li>
+          <li><NavLink to="/lebenslauf" onClick={() => setMenuOpen(false)}>Lebenslauf</NavLink></li>
+          <li><NavLink to="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</NavLink></li>
+        </ul>
           </nav>
 
           <h3 className="zertifikate-intro"> Diese Zertifikate habe ich auf Online Plattform wie LinkedIn bekommen, um meine Kenntnisse zu erweitern</h3>

@@ -58,6 +58,16 @@
   width: 100%;
 }
 
+.menu-toggle {  /*pour le menu ☰*/
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;           
+  line-height: 1;
+  cursor: pointer;
+}
+
 .download-section {
   text-align: center;
   padding-top: 100px;
@@ -153,30 +163,7 @@
 
 /* Mobiles */
 @media (max-width: 768px) {
-  /* Navbar en 2 colonnes: logo (auto) | nav (1fr) */
-  .navbar {
-    position: sticky;                
-    top: 0;
-    display: grid;
-    grid-template-columns: auto 1fr;  
-    align-items: center;
-    padding: 10px 12px;
-    background: #000;                 
-    z-index: 10;
-  }
-
-  .logo {
-    font-size: 50px;                  
-    margin-left: 0;
-    line-height: 1;
-  }
-
-.nav-links {
-        margin-right: 50px;
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
+  
 
   .nav-links li a {
     font-size: 0.95rem;              
@@ -192,6 +179,46 @@
 
   .section p {margin-left: 0;                   
   }
-}}
+  /* montre le bouton 3 points, réduit un peu le padding de la navbar */
+  .navbar {
+    padding: 14px 16px;
+  }
+  .menu-toggle {
+    display: block;          /* ← visible sur mobile */
+    z-index: 5;
+  }
+
+  /* cache la nav horizontale par défaut et la transforme en panneau vertical */
+  .nav-links {
+    display: none;           /* ← cachée par défaut en mobile */
+    position: absolute;
+    top: 100%;               /* juste sous la navbar */
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    z-index: 4;
+  }
+
+  /* quand menuOpen = true → on affiche */
+  .nav-links.open {
+    display: flex;           /* ← s’affiche en colonne */
+  }
+
+  /* liens un peu plus grands et faciles à cliquer */
+  .nav-links li a {
+    padding: 10px 2px;
+    font-size: 1.02rem;
+  }
+
+  /* optionnel: underline moins agressif en vertical */
+  .nav-links li a::after {
+    bottom: -2px;
+  }
+}
+}
 
 
