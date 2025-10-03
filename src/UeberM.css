@@ -204,15 +204,13 @@ padding: 20px;
     padding: 14px 16px;
   }
   .menu-toggle {
-    display: block;          /* ← visible sur mobile */
+    display: block;          
     z-index: 5;
   }
-
-  /* cache la nav horizontale par défaut et la transforme en panneau vertical */
   .nav-links {
-    display: none;           /* ← cachée par défaut en mobile */
+    display: none;        
     position: absolute;
-    top: 100%;               /* juste sous la navbar */
+    top: 100%;             
     left: 0;
     right: 0;
     background: rgba(0,0,0,0.95);
@@ -222,20 +220,14 @@ padding: 20px;
     border-top: 1px solid rgba(255,255,255,0.12);
     z-index: 4;
   }
-
-  /* quand menuOpen = true → on affiche */
   .nav-links.open {
-    display: flex;           /* ← s’affiche en colonne */
+    display: flex;          
   }
-
-  /* liens un peu plus grands et faciles à cliquer */
   .nav-links li a {
     padding: 10px 2px;
     font-size: 1.02rem;
   }
-
-  /* optionnel: underline moins agressif en vertical */
-  .nav-links li a::after {
+  .nav-links li a::after { /*la nav ici na pas de background ,weil rien ne se trouve juste derriere(aucun card ou ecriture)*/
     bottom: -2px;
   }
 }

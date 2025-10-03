@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;  
   align-items: center;  
-  width: 100vw;              /* évite 100vw pour ne pas créer de scroll horizontal */
-  height: 92vh;      
-  padding-top: 50px;       /* adapte à la hauteur réelle de  navbar */
+  width: 100vw;              /*definis lecran daffichage de la page*/
+  height: 100vh;      
+  padding-top: 50px;       /*le top que dois avoir le prochain elmt juste en bas de la nav */
   background: linear-gradient(-45deg, #000, #2c0101, #000, #111);
   background-size: 400% 400%;
   animation: gradientShift 8s ease infinite; /*Dauer dun cycle complet,transition douce,en boucle*/
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-between; /*logo links und nav rechts*/
   align-items: center;
-  z-index: 4;
+  z-index: 4;   /* je mehr das Index  größer ist. desto plus l'elemt est au dessus des autres*/
 }
 
 .logo {
@@ -131,15 +131,15 @@
     padding: 14px 16px;
   }
   .menu-toggle {
-    display: block;          /* ← visible sur mobile */
+    display: block;      
     z-index: 5;
   }
 
   /* cache la nav horizontale par défaut et la transforme en panneau vertical */
   .nav-links {
-    display: none;           /* ← cachée par défaut en mobile */
+    display: none;           
     position: absolute;
-    top: 100%;               /* juste sous la navbar */
+    top: 100%;              
     left: 0;
     right: 0;
     background: rgba(0,0,0,0.95);
@@ -149,19 +149,14 @@
     border-top: 1px solid rgba(255,255,255,0.12);
     z-index: 4;
   }
-
-  /* quand menuOpen = true → on affiche */
   .nav-links.open {
-    display: flex;           /* ← s’affiche en colonne */
+    display: flex;      
   }
-
-  /* liens un peu plus grands et faciles à cliquer */
   .nav-links li a {
     padding: 10px 2px;
     font-size: 1.02rem;
   }
-
-  /* optionnel: underline moins agressif en vertical */
+  /*underline moins agressif en vertical */
   .nav-links li a::after {
     bottom: -2px;
   }
