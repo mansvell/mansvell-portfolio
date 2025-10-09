@@ -149,8 +149,8 @@
 }
 
 .videoo{
-     max-height: 400px; /* max Länge von Videos, nicht möcglich in <video ...> */
-     object-fit: contain; /* ou 'cover' selon l'effet voulu */
+     max-height: 400px; /* max Länge von Videos, nicht möglich in <video ...> */
+     object-fit: contain; /* ou 'cover' selon l'effet qu'on veut */
     
 }
 
@@ -218,13 +218,13 @@
     padding: 14px 16px;
   }
   .menu-toggle {
-    display: block;          /* ← visible sur mobile */
+    display: block;          /* visible sur mobile */
     z-index: 5;
   }
 
   /* cache la nav horizontale par défaut et la transforme en panneau vertical */
   .nav-links {
-    display: none;           /* ← cachée par défaut en mobile */
+    display: none;           /* cest cachée par défaut en mobile */
     position: absolute;
     top: 100%;               /* juste sous la navbar */
     left: 0;
@@ -237,9 +237,9 @@
     z-index: 4;
   }
 
-  /* quand menuOpen = true → on affiche */
+  /* quand menuOpen = true , on affiche */
   .nav-links.open {
-    display: flex;           /* ← s’affiche en colonne */
+    display: flex;           /*s’affiche en colonne */
   }
 
   /* liens un peu plus grands et faciles à cliquer */

@@ -12,7 +12,7 @@ export default function UeberM() {
   /*const contentinfo='Ich bin Mansvell, Student an der THM..' ; cest une possibilité*/
   const contentInfo= (
     <div>
-        <p> Ich heiße Mansvell Nkwanga , bin 23 Jahre alt und wohne in Gießen.</p>
+        <p> Ich heiße Mansvell Nkwanga und wohne in Gießen.</p>
         <p> Ich studiere an der Technische Hochschule Mittelhessen(THM)im Bachelor 6.Semester. </p>
         <p>Als leidenschaftlicher Software Entwickler ist die Programmierung eine wesentlichere Sache für mich.</p>
         <p>Während meines Studiums an der THM habe ich an vielen Projekten gearbeitet, darunter

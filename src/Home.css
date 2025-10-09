@@ -5,7 +5,7 @@
   width: 100vw;              /*definis lecran daffichage de la page*/
   height: 100vh;      
   padding-top: 50px;       /*le top que dois avoir le prochain elmt juste en bas de la nav */
-  background: linear-gradient(-45deg, #000, #2c0101, #000, #111);
+  background: linear-gradient(-45deg, #0a88b9, #630202, #000, #111);
   background-size: 400% 400%;
   animation: gradientShift 8s ease infinite; /*Dauer dun cycle complet,transition douce,en boucle*/
 }
