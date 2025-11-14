@@ -5,7 +5,7 @@ import zert1 from './assets/ExamDocker.png'
 import zert2 from './assets/git.png'
 import zert4 from './assets/react.png'
 import zert3 from './assets/dockerComp.png'
-
+import zert5 from './assets/SpringBoot.png'
 
 
 const zertifs=[
@@ -45,6 +45,16 @@ const zertifs=[
         
       )
       },
+      { 
+      id: 5,
+      src: zert5,
+      link: (
+        <div style={{background:'red', padding:'10px', color:'white'}}>
+           <a href='https://www.linkedin.com/learning/certificates/f7877cb55b82aef4635ebb1be8b88e71abcd008445c22007772f2acdfc7bd4c7?trk=share_certificate'>Zertifikat in LINKEDIN überprüfen</a>
+        </div>
+        
+      )
+      }
     
   ];
 export default function Zertifikate() {

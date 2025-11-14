@@ -15,7 +15,7 @@ export default function UeberM() {
         <p> Ich heiße Mansvell Nkwanga und wohne in Gießen.</p>
         <p> Ich studiere an der Technische Hochschule Mittelhessen(THM)im Bachelor 6.Semester. </p>
         <p>Als leidenschaftlicher Software Entwickler ist die Programmierung eine wesentlichere Sache für mich.</p>
-        <p>Während meines Studiums an der THM habe ich an vielen Projekten gearbeitet, darunter
+        <p>Während meines Studiums an der THM habe ich auf viele Projekte gearbeitet, darunter
       dynamische Webanwendungen, AndroidAnwendungen, Videospiele auch mit KI. </p>
       <p>Ich bin immer motiviert, was Neues zu lernen. Meine Hobbys sind  Fußball spielen, Bücher lesen, und Reisen</p>
       <p><u>Email:</u> Mansvellnk@gmail.com</p>
@@ -39,18 +39,20 @@ export default function UeberM() {
   { name: 'Python', percent: 80 },
   { name: 'HTML5', percent: 80 },
   { name: 'Kotlin', percent: 80 },
-  { name: 'CSS 3', percent: 80 },
+  { name: 'CSS', percent: 80 },
   { name: 'Typescript', percent: 70 },
   { name: 'Javascript', percent: 70 },
   { name: 'MySQL', percent: 80 },
+  { name: 'PostgreSQL', percent: 80 },
   { name: 'Arduino', percent: 65 },
   { name: 'C', percent: 60 },
   ];
 
   const kenntnisse = [
   { name: 'Datenbank', percent: 80 },
-  { name: 'React.js', percent: 70 },
+  { name: 'React.js(Frontend)', percent: 70 },
   { name: 'Vert.X (Backend)', percent: 80 },
+  { name: 'SpringBoot(Backend)', percent: 70 },
   { name: 'Git & GitHub', percent: 80 },
   { name: 'Docker', percent: 70 },
   { name: 'Jetpack Compose', percent: 80 },

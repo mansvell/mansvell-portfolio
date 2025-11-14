@@ -4,8 +4,8 @@
   align-content: flex-start; /*important pour eviter les depacements du bas decran*/
   gap: 16px;
   width: 100vw;              
-  height: 100vh;        /* occupe au moins toute la hauteur d’écran */
-  padding-top: 110px;       /* adapte à la hauteur réelle de ta navbar */
+  height: 140vh;        /*en fonction du scroll vertical que je veux */
+  padding-top: 110px;      
   background-color: #000000;
 }
 .navbar {
