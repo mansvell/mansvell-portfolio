@@ -41,7 +41,7 @@ export default function Lebenslauf() {
                     <p>° Android-Praktikum ( AndroidApp , KOTLIN) </p>
                     <p>° Objektorientierte Programmierung(JAVA)</p>
                     <p>°  Praktische Informatik 1&2(HTML,VERT.X,CSS,JS)</p>
-                    <p>°  Konzepte systemnaher Programmierung (C#)</p>
+                    <p>°  Konzepte systemnaher Programmierung (C)</p>
                     <p>° Algorithmen und Datenstrukturen </p>
             <li><strong style={{color:'red'}}> 10/2022 - 12/2022:</strong> EIFERT SPRACHZENTRUM (FRANKFURT)</li>
                 <p> <u> Abschluss:</u> Telc-Zertifikat C1 Hochschule</p>
