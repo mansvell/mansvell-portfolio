@@ -272,8 +272,8 @@ const [menuOpen, setMenuOpen] = useState(false);
         </ul>
       </nav>
 
-      <div className="projects-grid">
-        {projects.map((project,idx) => (
+      <div className="projects-grid">   
+        {projects.map((project,idx) => (  // un grid= cellule de ligne et colonne, un card est le cadre stylé affiché dans un grid
           <div key={idx}
               className={`project-card ${activeProject === null ? 'show' : activeProject === idx ? 'active' : 'hide'}`}
                 onClick={() => setActiveProject(idx)} >
@@ -283,7 +283,7 @@ const [menuOpen, setMenuOpen] = useState(false);
              )}
 
             {activeProject !== idx && (
-            <div className="card-header">
+            <div className="card-header">  
               <h3>{project.title}</h3>
                 <a
                   href={project.github}

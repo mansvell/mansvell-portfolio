@@ -25,10 +25,7 @@ export default function Lebenslauf() {
         </ul>
       </nav>
 
-      <div className="download-section">
-        <h3> Lebenslauf herunterladen: </h3> 
-        <a className="download-btn"  href="/Lebenslauf-NK.pdf"  download="Lebenslauf-NK.pdf" > Download  </a>
-      </div> 
+       
 
       <div className="sections">
         <div className="section left">
