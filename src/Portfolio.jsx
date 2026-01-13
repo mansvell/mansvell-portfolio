@@ -26,6 +26,8 @@ import project11 from './assets/arduino.png';
 import projectDemo11 from '/arduinoDemo.mp4'  ;
 import project12 from './assets/umrhf.png';
 import projectDemo12 from '/umrhfDemo.mp4';
+import project13 from './assets/CarCollection.png';
+import projectDemo13 from '/carcollectionDemo.mp4';
 
 
 
@@ -87,6 +89,26 @@ const projects = [
   },
   {
     id: 4,
+    title: 'CarCollection',
+    image: project13,
+    github: 'https://github.com/mansvell/Car-Collection.git',
+    description: (
+        <div>
+           <p>Ich habe diese App entwickelt für alle Personnen ,die eine Leidenschaft für Autos haben. Dort können Sie alle Informartionen Von unterschiedlichen
+             und bekannten Automarken sehen und auch von beeindrcuckenden Autos. Vorschläge können User machen und like machen und ein Konto erstellen.
+             Sie hat auch ein Administratzor Sektion</p>
+             <p><u>Persönliches Projekt</u>: CarCollection</p>
+            <p><u>Meine Rollen</u>: Backend + Frontend + Database</p>
+           <div >
+              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>SpringBoot, Angular, Tailwind.CSS , SQLite, HTML, Git</span> </h3>
+           </div>
+           
+        </div>),
+    video: projectDemo13,
+    screenshots: [ , ]
+  },
+  {
+    id: 5,
     title: 'MJ-Shop',
     image: project4,
     github: 'https://github.com/mansvell/Webanwendung-MJ-Shop.git',
@@ -105,7 +127,7 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 5,
+    id: 6,
     title: 'Feuer-Wasser-Pflanze',
     image: project5,
     github: 'https://github.com/mansvell',
@@ -125,7 +147,7 @@ const projects = [
   },
   
   {
-    id: 6,
+    id: 7,
     title: 'Fruchtninja',
     image: project6,
     github: 'https://github.com/mansvell/Frucht-Ninja-Spiel.git',
@@ -143,7 +165,7 @@ const projects = [
     screenshots: [ ],
   },
   {
-    id: 7,
+    id: 8,
     title: 'PokePong',
     image: project7,
     github: 'https://github.com/mansvell/Pokemon-Pong.git',
@@ -160,7 +182,7 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 8,
+    id: 9,
     title: 'Compiler',
     image: project8,
     github: 'https://github.com/mansvell/Compilerbau.git',
@@ -177,7 +199,7 @@ const projects = [
     screenshots:[projectScreen8  ] ,
   },
   {
-    id: 9,
+    id: 10,
     title: 'Ninja Virtuelle Maschine',
     image: project9,
     github: 'https://github.com/mansvell',
@@ -193,7 +215,7 @@ const projects = [
     screenshots:[ projectScreen9 ] ,
   },
   {
-    id: 10,
+    id: 11,
     title: 'Ibitak Collision',
     image: project10,
     github: 'https://github.com/mansvell/Ibitak-Kollision.git',
@@ -211,7 +233,7 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 11,
+    id: 12,
     title: 'LED Steuerung',
     image: project11,
     github: 'https://github.com/mansvell',
@@ -229,7 +251,7 @@ const projects = [
   },
   
   {
-    id: 12,
+    id: 13,
     title: 'Umrechnungshilfe',
     image: project12,
     github: 'https://github.com/mansvell/Umrechnungshilfe.git',
