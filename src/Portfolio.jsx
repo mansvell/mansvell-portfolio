@@ -26,7 +26,7 @@ import project11 from './assets/arduino.png';
 import projectDemo11 from '/arduinoDemo.mp4'  ;
 import project12 from './assets/umrhf.png';
 import projectDemo12 from '/umrhfDemo.mp4';
-import project13 from './assets/CarCollection.png';
+import project13 from './assets/carcollection.png';
 import projectDemo13 from '/carcollectionDemo.mp4';
 
 
