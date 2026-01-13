@@ -6,6 +6,7 @@ import zert2 from './assets/git.png'
 import zert4 from './assets/react.png'
 import zert3 from './assets/dockerComp.png'
 import zert5 from './assets/SpringBoot.png'
+import zert6 from './assets/angularsys.png'
 
 
 const zertifs=[
@@ -51,6 +52,16 @@ const zertifs=[
       link: (
         <div style={{background:'red', padding:'10px', color:'white'}}>
            <a href='https://www.linkedin.com/learning/certificates/f7877cb55b82aef4635ebb1be8b88e71abcd008445c22007772f2acdfc7bd4c7?trk=share_certificate'>Zertifikat in LINKEDIN überprüfen</a>
+        </div>
+        
+      )
+      },
+      { 
+      id: 6,
+      src: zert6,
+      link: (
+        <div style={{background:'red', padding:'10px', color:'white'}}>
+           <a href='https://www.linkedin.com/learning/certificates/1730677a0bc5aac56ff1e7a669b1876f6eccab83544f56f58e4f55330d4fc59d?u=75094530'>Zertifikat in LINKEDIN überprüfen</a>
         </div>
         
       )
