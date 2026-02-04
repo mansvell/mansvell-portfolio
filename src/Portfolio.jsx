@@ -9,8 +9,8 @@ import project3 from './assets/qawale.jpg';
 import projectDemo3 from '/QawaleDemo.mp4';
 import project4 from './assets/mjshop.png';
 import projectDemo4 from '/mjshopDemo.mp4';
-import project5 from './assets/WPF.png';
-import projectDemo5 from '/WPFDemo.mp4';
+import project5 from './assets/mga.png';
+import projectDemo5 from '/mgaDemo.mp4';
 
 import project6 from './assets/FN.png';
 import projectDemo6 from '/FNDemo.mp4';
@@ -28,7 +28,8 @@ import project12 from './assets/umrhf.png';
 import projectDemo12 from '/umrhfDemo.mp4';
 import project13 from './assets/carcollection.png';
 import projectDemo13 from '/carcollectionDemo.mp4';
-
+import project14 from './assets/wscape.png'
+import projectDemo14 from '/wonderscape.mp4';
 
 
 
@@ -40,11 +41,11 @@ const projects = [
     github: 'https://github.com/mansvell',
     description: (
         <div>
-           <h3>Diese Webseite stellt mein Portfolio dar und besteht aus 4 Teilen. es enthält meine Informationen, Zertifikate,
-              Lebenslauf und meine Projekte "sowohl Einzelprojekte als auch Teamprojekte😋"</h3>
+           <h3>Diese Website stellt mein Portfolio dar und besteht aus 4 Teilen. es enthält meine Informationen, Zertifikate,
+              Lebenslauf und meine Projekte "sowohl Einzelprojekte als auch Teamprojekte"</h3>
            <div >
-            <p><u>| Einzelprojekt |</u> </p>
-              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>React.js ,   CSS , html </span> </h3>
+            <p><u>| Persönliches Projekt |</u> </p>
+              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>React.js ,  CSS , html </span> </h3>
            </div> 
         </div>),
 
@@ -56,7 +57,7 @@ const projects = [
     github: 'https://github.com/mansvell/SmartSaveApp.git',
     description: (
         <div>
-           <p>Das ist eine AndroidApp ,die mit Bankkonto, Kreditkartekonto oder Sparkonto verbindet ist und ermöglicht die Verwaltung von Sparzielen 
+           <p>SmartSaveApp ist eine AndroidApp ,die mit Bankkonto, Kreditkartekonto oder Sparkonto verbindet ist und ermöglicht die Verwaltung von Sparzielen 
              durch ein Sparkonto.Der User kann auch seine Umsätze kategorisieren und verwalten, also nach der Registrierung</p>
             <p><u>Vorlesung</u>: Android-Praktikum  |  (TeamArbeit-3Pers)<u>Bewertung des Projekts</u>: 100</p>
             <p><u>Meine Rollen</u>: Implementierung der Logik: 50% , Implementierung der UI :35% , Erstellung Roomdatenbank:50%</p>
@@ -97,10 +98,10 @@ const projects = [
            <p>Ich habe diese App entwickelt für alle Personnen ,die eine Leidenschaft für Autos haben. Dort können Sie alle Informartionen Von unterschiedlichen
              und bekannten Automarken sehen und auch von beeindrcuckenden Autos. Vorschläge können User machen und like machen und ein Konto erstellen.
              Sie hat auch ein Administratzor Sektion</p>
-             <p><u>Persönliches Projekt</u>: CarCollection</p>
+             <p><u>| Persönliches Projekt |</u> </p>
             <p><u>Meine Rollen</u>: Backend + Frontend + Database</p>
            <div >
-              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>SpringBoot, Angular, Tailwind.CSS , SQLite, HTML, Git</span> </h3>
+              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>SpringBoot, Angular, Docker, Tailwind.CSS , SQLite, HTML, Git</span> </h3>
            </div>
            
         </div>),
@@ -109,6 +110,25 @@ const projects = [
   },
   {
     id: 5,
+    title: 'Wonderscape',
+    image: project14,
+    github: 'https://github.com/mansvell/Wonderscape.git',
+    description: ( 
+        <div>  
+           <p>Wonderscape ist eine App, die wichtige Informationen über die Weltwunder, Landschaften, Monumente, bekannte Schlösser
+             und viel mehr übermitteln. Dies hilft dem Nutzer dabei ,sich nicht nur gründlich sondern auch schneller zu kultivieren.
+             Die Besonderheit bei dieser App ist ,dass sie 3 unterschiedlichen Sprachen (deutsch ,franzöisch, englisch) aufweist 
+             und besitzt auch einen ChatBot . </p>
+            <p><u>| Persönliches Projekt |</u> </p>
+           <div >
+              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}> Angular, OpenAI(Chatbot)</span> </h3>
+           </div>
+        </div>),
+    video: projectDemo14,
+    screenshots: [ , ]
+  },
+  {
+    id: 6,
     title: 'MJ-Shop',
     image: project4,
     github: 'https://github.com/mansvell/Webanwendung-MJ-Shop.git',
@@ -127,27 +147,25 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 6,
-    title: 'Feuer-Wasser-Pflanze',
+    id: 7,
+    title: 'Mini Game Arena',
     image: project5,
-    github: 'https://github.com/mansvell',
+    github: 'https://github.com/mansvell/MiniGameArena.git',
     description: (
-        <div>
-           <p>Das ist ein entspannendes Webspiel. Es besteht aus 3 Pokemon. Pokemon Shiggy kann nur Pokemon Glumanda schlagen,
-             Pokemon Glumanda kann nur Pokemon Bisasam schlagen und Pokemon Bisasam kann nur Pokemon Shiggy schlagen.
-             links erscheint der ausgewählte Pokemon des Users und rechts der Pokemon des Computers.</p>
-            <p><u>| Einzelprojekt |</u> </p>
-           <div >
-              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}> HTML5,  CSS , Javascript, Typescript </span> </h3>
+        <div> 
+           <p>Mini Game Arena ist ein Spielplattform ,das mehrere spannende Mini-Spiele enthält, wie: SteinPapierSchere , 
+            Jagd , Memory card, Memory Color ,Reaction Time</p>
+            <p><u>| Persönliches Projekt |</u> </p>
+           <div>
+              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}> HTML5,  Tailwind.css , Javascript </span> </h3>
            </div>
-           
         </div>),
     video: projectDemo5,
     screenshots: [ , ]
   },
   
   {
-    id: 7,
+    id: 8,
     title: 'Fruchtninja',
     image: project6,
     github: 'https://github.com/mansvell/Frucht-Ninja-Spiel.git',
@@ -165,7 +183,7 @@ const projects = [
     screenshots: [ ],
   },
   {
-    id: 8,
+    id: 9,
     title: 'PokePong',
     image: project7,
     github: 'https://github.com/mansvell/Pokemon-Pong.git',
@@ -182,7 +200,7 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 9,
+    id: 10,
     title: 'Compiler',
     image: project8,
     github: 'https://github.com/mansvell/Compilerbau.git',
@@ -199,7 +217,7 @@ const projects = [
     screenshots:[projectScreen8  ] ,
   },
   {
-    id: 10,
+    id: 11,
     title: 'Ninja Virtuelle Maschine',
     image: project9,
     github: 'https://github.com/mansvell',
@@ -215,7 +233,7 @@ const projects = [
     screenshots:[ projectScreen9 ] ,
   },
   {
-    id: 11,
+    id: 12,
     title: 'Ibitak Collision',
     image: project10,
     github: 'https://github.com/mansvell/Ibitak-Kollision.git',
@@ -233,7 +251,7 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 12,
+    id: 13,
     title: 'LED Steuerung',
     image: project11,
     github: 'https://github.com/mansvell',

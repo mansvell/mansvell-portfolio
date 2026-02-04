@@ -2,7 +2,10 @@ html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
+* { box-sizing: border-box; }
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

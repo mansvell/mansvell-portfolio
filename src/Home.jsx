@@ -54,7 +54,7 @@ export default function Home() {
       </div>
         
       <div className="foot">
-          <footer>©2025 Copyright: Mansvell NK.| Letzte Aktualisierung:13.01</footer>
+          <footer>©2026 Copyright: Mansvell NK.| Letzte Aktualisierung:04.02</footer>
         </div>
     </div>
     

@@ -45,19 +45,20 @@ export default function UeberM() {
   { name: 'MySQL', percent: 80 },
   { name: 'PostgreSQL', percent: 80 },
   { name: 'Arduino', percent: 65 },
-  { name: 'C', percent: 60 },
+  { name: 'C', percent: 60 }
   ];
 
   const kenntnisse = [
   { name: 'Datenbank', percent: 80 },
   { name: 'React.js(Frontend)', percent: 70 },
+  { name: 'Angular(Frontend)', percent: 70 },
   { name: 'Vert.X (Backend)', percent: 80 },
   { name: 'SpringBoot(Backend)', percent: 70 },
   { name: 'Git & GitHub', percent: 80 },
-  { name: 'Docker', percent: 70 },
+  { name: 'Docker', percent: 80 },
   { name: 'Jetpack Compose', percent: 80 },
   { name: 'Betriebsystem: Windows/Linux', percent: 70 },
-  { name: 'Bootstrap/Framework', percent: 75 },
+  { name: 'Bootstrap/Tailwind', percent: 75 },
   { name: 'LaTeX', percent: 70 },
   { name: 'Markdown', percent: 80 },
 ];
@@ -120,9 +121,9 @@ export default function UeberM() {
 );
 
 const cards = [
-  { id: 'info', title:'Informationen😋', content: contentInfo },
-  {id: 'bilder', title:'Bilder🖼️', content: contentBilder },
-  {id: 'skills',title: 'Kodierfähigkeiten💻', content: contentSkills }
+  { id: 'info', title:'Informationen', content: contentInfo },
+  {id: 'bilder', title:'Bilder', content: contentBilder },
+  {id: 'skills',title: 'Kodierfähigkeiten', content: contentSkills }
 ];
 
 const [menuOpen, setMenuOpen] = useState(false);
