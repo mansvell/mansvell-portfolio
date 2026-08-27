@@ -1,6 +1,8 @@
-import './Portfolio.css';
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState ,useEffect} from 'react';
+import Navi from "./components/Navi";
+import { useApp } from "./context/AppContext";
+import { translations } from "./translations/translations";
+
 import githubIcon from './assets/gitIcon.png'; 
 import project1 from './assets/portfolio.png';
 import project2 from './assets/smart.png';
@@ -57,7 +59,7 @@ const projects = [
     github: 'https://github.com/mansvell/SmartSaveApp.git',
     description: (
         <div>
-           <p>SmartSaveApp ist eine AndroidApp ,die mit Bankkonto, Kreditkartekonto oder Sparkonto verbindet ist und ermöglicht die Verwaltung von Sparzielen 
+           <p>SmartSaveApp ist eine AndroidApp ,die mit Bankkonto, Kreditkartenkonto oder Sparkonto verbunden ist und ermöglicht die Verwaltung von Sparzielen 
              durch ein Sparkonto.Der User kann auch seine Umsätze kategorisieren und verwalten, also nach der Registrierung</p>
             <p><u>Vorlesung</u>: Android-Praktikum  |  (TeamArbeit-3Pers)<u>Bewertung des Projekts</u>: 100</p>
             <p><u>Meine Rollen</u>: Implementierung der Logik: 50% , Implementierung der UI :35% , Erstellung Roomdatenbank:50%</p>
@@ -269,7 +271,7 @@ const projects = [
   },
   
   {
-    id: 13,
+    id: 14,
     title: 'Umrechnungshilfe',
     image: project12,
     github: 'https://github.com/mansvell/Umrechnungshilfe.git',
@@ -290,82 +292,160 @@ const projects = [
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(null);
-const [menuOpen, setMenuOpen] = useState(false);
+  const { language } = useApp();
+  const t = translations[language];
+
+  const closeProject = () => setActiveProject(null);
+
+  useEffect(() => {
+    if (activeProject === null) return;
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") closeProject();
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [activeProject]);
+
   return (
-    <div className="portfolio-container">
-      <nav className="navbar">
-        <div className="logo">MnK<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmN6dHdwMGNzcTZnbzU2ZTBmeXpjYXg5d2QzdWVyaWY1dm40c2cxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yfPmYMIsbeuRP8odz0/giphy.gif" alt="smile" width="40" height="40" /></div>
-        <button
-          className="menu-toggle"
-          aria-label="Menü"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(v => !v)}
-        >
-          ☰
-        </button>
-        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <li><NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink></li>
-          <li><NavLink to="/ueber-mich" onClick={() => setMenuOpen(false)}>Über mich</NavLink></li>
-          <li><NavLink to="/zertifikate" onClick={() => setMenuOpen(false)}>Zertifikate</NavLink></li>
-          <li><NavLink to="/lebenslauf" onClick={() => setMenuOpen(false)}>Lebenslauf</NavLink></li>
-          <li><NavLink to="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</NavLink></li>
-        </ul>
-      </nav>
+    <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-[#f7f7f5] text-neutral-950 transition-colors duration-500 dark:bg-[#0b0b0b] dark:text-white">
 
-      <div className="projects-grid">   
-        {projects.map((project,idx) => (  // un grid= cellule de ligne et colonne, un card est le cadre stylé affiché dans un grid
-          <div key={idx}
-              className={`project-card ${activeProject === null ? 'show' : activeProject === idx ? 'active' : 'hide'}`}
-                onClick={() => setActiveProject(idx)} >
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[560px] bg-gradient-to-b from-red-500/20 via-red-500/5 to-transparent dark:from-red-700/25 dark:via-red-900/10 dark:to-transparent" />
 
-            {activeProject !== idx && (
-                 <img src={project.image} alt={project.title} />
-             )}
+      <Navi />
 
-            {activeProject !== idx && (
-            <div className="card-header">  
-              <h3>{project.title}</h3>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="github-link"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <img src={githubIcon} alt="GitHub" />
-                </a>
-            </div>
-             )}
+      <main className="relative mt-12  z-10 flex-1">
+        <section className="mx-auto w-full max-w-7xl px-5 pb-20 pt-10 sm:px-8 sm:pt-14 lg:px-12">
 
-            {activeProject === idx && (
-              <div className="project-content">
-                <h2 style={{color:'red'}}>{project.title}</h2>
-              <p>{project.description}</p>
-               {project.video && (
-                    <video className="videoo" controls width="70%" height="50%">
-                      <source src={project.video} type="video/mp4" />
-                    </video>
-               )}
-         
-               {project.screenshots && (
-                 <div className="screenshots">
-                    {project.screenshots.map((img, i) => (
-                       <img key={i} src={img} alt="screenshot" />
-                    ))}
-                 </div>
-               )}
-
-                <button className="close-btn" onClick={(e) => { 
-                    e.stopPropagation();
-                    setActiveProject(null);
-                }}> Zurück</button>
-              </div>
-            )}
+          <div className="mb-12 max-w-2xl">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-red-600">{t.portfolio.eyebrow}</p>
+            <h1 className="text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">{t.portfolio.title}</h1>
+            <div className="mt-5 h-[2px] w-12 bg-red-600" />
+            <p className="mt-6 text-sm leading-7 text-neutral-500 dark:text-neutral-400 sm:text-base">{t.portfolio.description}</p>
           </div>
-        ))}
-      </div>
+
+          {/* Grille des projets */}
+          <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+
+            {projects.map((project, index) => (
+              <article key={`${project.id}-${index}`} className="group overflow-hidden rounded-2xl border  bg-white transition-all duration-300 hover:-translate-y-1  hover:shadow-xl  dark:bg-neutral-900 dark:hover:border-red-900">
+
+                <button onClick={() => setActiveProject(index)} className="block w-full text-left  bg-red-200 dark:bg-red-500/25">
+
+                  <div className="relative aspect-[16/10] overflow-hidden"> {/*aspect donne la meme taille a toutes les images*/}
+                    <img src={project.image} alt={project.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+                    {project.video && (
+                      <span className="absolute bottom-4 left-4 rounded-full bg-black/70 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-white opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:opacity-100">{t.portfolio.demo}</span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center justify-between gap-2 p-2">
+                    <div className="min-w-0">
+                      <h2 className="truncate text-base font-semibold">{project.title}</h2>
+                    </div>
+
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border  text-lg text-neutral-500 transition-all duration-300 group-hover:border-red-600 group-hover:bg-red-600 group-hover:text-white dark:border-neutral-700 dark:text-neutral-300">↗</span>
+                  </div>
+                </button>
+
+              </article>
+            ))}
+          </div>
+
+        </section>
+      </main>
+
+    
+
+      {/*Modal du projet */}
+      {activeProject !== null && (
+        <ProjectModal project={projects[activeProject]} index={activeProject} total={projects.length} onClose={closeProject} t={t} />
+      )}
+
     </div>
   );
 }
 
+function ProjectModal({ project, index, total, onClose, t }) {
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 p-3 backdrop-blur-sm sm:p-6" role="dialog" aria-modal="true" aria-label={project.title} onClick={onClose}>
+
+      <div className="relative flex max-h-[94vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#f7f7f5] shadow-2xl dark:bg-neutral-950" onClick={(event) => event.stopPropagation()}>
+
+        <div className="flex shrink-0 items-center justify-between gap-4 border-b border-neutral-200 px-5 py-4 dark:border-neutral-800 sm:px-6">
+          <div className="min-w-0">
+            <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.2em] text-red-600">{t.portfolio.project} {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}</p>
+            <h2 className="truncate text-lg font-semibold sm:text-xl">{project.title}</h2>
+          </div>
+
+          <button onClick={onClose} className="flex h-10 min-w-[52px] shrink-0 items-center justify-center rounded-full border border-neutral-300 bg-white px-4 text-xs font-bold tracking-wider text-neutral-900 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:hover:border-red-500 dark:hover:bg-red-600" aria-label={t.portfolio.close}>X</button>
+        </div>
+
+      
+        <div className="min-h-0 flex-1 overflow-y-auto">
+
+          <div className="p-5 sm:p-7">
+
+            <div className="project-description space-y-4 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+              {project.description}
+            </div>
+
+            {project.video && (
+              <div className="mt-8">
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="h-px w-6 bg-red-600" />
+                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">{t.portfolio.videoDemo}</h3>
+                </div>
+
+                <div className="overflow-hidden rounded-xl bg-black">
+                  <video controls preload="metadata" className="max-h-[520px] w-full bg-black object-contain">
+                    <source src={project.video} type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            )}
+
+            {project.screenshots?.filter(Boolean).length > 0 && (
+              <div className="mt-8">
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="h-px w-6 bg-red-600" />
+                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">{t.portfolio.screenshots}</h3>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {project.screenshots.filter(Boolean).map((img, screenshotIndex) => (
+                    <a key={screenshotIndex} href={img} target="_blank" rel="noreferrer" className="overflow-hidden rounded-xl border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
+                      <img src={img} alt={`${project.title} Screenshot ${screenshotIndex + 1}`} className="h-auto w-full object-contain transition-transform duration-500 hover:scale-[1.02]" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+          </div>
+        </div>
+
+        {/* Actions */}
+        <div className="flex shrink-0 flex-col gap-3 border-t border-neutral-200 bg-white px-5 py-4 dark:border-neutral-800 dark:bg-neutral-950 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <p className="text-xs text-neutral-400">{t.portfolio.sourceInfo}</p>
+
+          <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 rounded-full bg-red-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-red-700">
+            GitHub
+            <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  );
+}
 
