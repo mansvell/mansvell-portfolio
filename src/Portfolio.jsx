@@ -34,8 +34,11 @@ import project14 from './assets/wscape.png'
 import projectDemo14 from '/wonderscape.mp4';
 import project15 from './assets/smcook.png'
 import projectDemo15 from '/smartcook.mp4';
-
-
+import project16 from './assets/tellme.png'
+import projectScreen16 from './assets/tellme1.png';
+import projectScreen17 from './assets/tellme3.png';
+import projectScreen18 from './assets/tellme4.png';
+import projectScreen19 from './assets/tellme5.png';
 
 
 const projects = [
@@ -49,7 +52,7 @@ const projects = [
            <h3>Diese Website stellt mein Portfolio dar und besteht aus 3 Sprachen und ein Darkmodus. Hier haben Sie die Möglichkeit, meine persönlichen Informationen schnell zu finden und 
              viel über mich zu lernen, meine Zertifikate zu finden, einen Überblick über meinen Werdegang zu haben und abschließend meine Projekte zu entdecken. </h3>
            <div >
-            <p><u>| Persönliches Projekt |</u> </p>
+            <p><u>| Persönliches Projekt |</u> <span style={{color:'rgb(0, 217, 255)'}}>Link zum Projekt: <a href="https://mansvell-portfolio.vercel.app/">https://mansvell-portfolio.vercel.app/</a>  </span></p>
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>React.js ,  CSS , Html ,Javascript </span> </h3>
            </div> 
         </div>),
@@ -64,7 +67,7 @@ const projects = [
         <div>
            <p>SmartSaveApp ist eine Android-App ,die mit Bankkonto, Kreditkartenkonto oder Sparkonto verbunden ist und ermöglicht die Verwaltung von Sparzielen 
              durch ein Sparkonto. Der Nutzer kann auch seine Umsätze kategorisieren und verwalten, also nach der Registrierung</p>
-            <p><u>Vorlesung</u>: Android-Praktikum  |  (TeamArbeit-3Pers)<u>Bewertung des Projekts</u>: 100</p>
+            <p><u>Vorlesung</u>: Android-Praktikum  |  (TeamArbeit-3Pers)<u>Bewertung des Projekts</u>: 100/100</p>
             <p><u>Meine Rollen</u>: Implementierung der Logik: 50% , Implementierung der UI :35% , Erstellung Roomdatenbank:50%</p>
            <div >
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>KOTLIN, Jetpack Compose, Layout-XML, Roomdatabase, MySQL, Firebase, Git</span> </h3>
@@ -108,6 +111,7 @@ const projects = [
               SmartCook integriert zudem eine künstliche Intelligenz (KI), um dem Nutzer Rezepte auf Basis seiner Restzutaten vorzuschalegen.
               Die Anwendung umfasst schließlich eine wöchentliche Mahlzeitenplanung und ein Gamification-System, das die Aktivität des Nutzers belohnt.
             </p>
+            <p><span style={{color:'rgb(0, 217, 255)'}}>Link zum Projekt: <a href="https://smartcook-murex.vercel.app/">https://smartcook-murex.vercel.app/</a>  </span></p>
              <p><u>Vorlesung</u>: Software Engineering: Realisierung | (TeamArbeit-4Pers)<u>Bewertung des Projekts</u>: 100/100</p>
             <p><u>Meine Rollen</u>: Backend(50% + KI-inklusiv) + Frontend(Willkommenseite, Alle Loginseiten, Startseite, KI-Seite, Favorisseite, Rezepteseite, Alle Profilseiten) </p>
            <div >
@@ -128,7 +132,7 @@ const projects = [
            <p>Ich habe diese App entwickelt für alle Personen ,die eine Leidenschaft für Autos haben. Dort können Sie alle Informartionen Von unterschiedlichen
              und bekannten Automarken sehen und auch von beeindrcuckenden Autos. Vorschläge können Nutzer machen ,Autos als Favorit hinzufügen und ein Konto erstellen.
              Sie hat auch ein Administrator-Sektion, wo alle Statistiken einsehbar sind. </p>
-             <p><u>| Persönliches Projekt |</u> </p>
+             <p><u>| Persönliches Projekt |</u></p>
             <p><u>Meine Rollen</u>: Backend + Frontend + Database</p>
            <div >
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>SpringBoot, Angular, Docker, Tailwind.CSS , SQLite, HTML, Git</span> </h3>
@@ -150,7 +154,7 @@ const projects = [
             Der Nutzer kann die Orte auch nach Ländern entdecken, eine Auswahl der wichtigsten Sehenswürdigkeiten eines Landes einsehen 
             oder die Funktion „Surprise Me“ nutzen, um spontan zu einem Reiseziel aufzubrechen.
            </p>
-            <p><u>| Persönliches Projekt |</u> </p>
+            <p><u>| Persönliches Projekt |</u>  <span style={{color:'rgb(0, 217, 255)'}}>Link zum Projekt: <a href="https://wonderscape-six.vercel.app/">https://wonderscape-six.vercel.app/</a>  </span> </p>
            <div >
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}> Angular, OpenAI(Chatbot)</span> </h3>
            </div>
@@ -186,7 +190,7 @@ const projects = [
         <div> 
            <p>Mini Game Arena ist ein Spielplattform ,das mehrere spannende Mini-Spiele enthält, wie: SteinPapierSchere , 
             Jagd , Memory card, Memory Color ,Reaction Time</p>
-            <p><u>| Persönliches Projekt |</u> </p>
+            <p><u>| Persönliches Projekt |</u> <span style={{color:'rgb(0, 217, 255)'}}>Link zum Projekt: <a href="https://mansvell.github.io/MiniGameArena/">https://mansvell.github.io/MiniGameArena/</a>  </span> </p>
            <div>
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}> HTML5,  Tailwind.css , Javascript </span> </h3>
            </div>
@@ -315,6 +319,29 @@ const projects = [
         </div>),
     video: projectDemo12,
     screenshots: [ , ]
+  },
+  {
+    id: 16,
+    title: 'TellMe',
+    image: project16,
+    github: 'https://github.com/mansvell/TellMe.git',
+    description: (
+        <div>
+           <p>TellMe ist eine soziale und anonyme Messaging-App, bei der der spontane Austausch in Gruppen im Mittelpunkt steht.
+              Nutzer können über einen Link Gruppen erstellen oder ihnen beitreten, chatten, Medien teilen und andere Mitglieder direkt einladen.
+              Jede Gruppe hat einen „Dominus“, der sie erstellt und unter anderem ihre Lebensdauer festlegen kann, bevor sie automatisch gelöscht wird.
+              Die App bietet „Buzz“ an, einen Bereich, in dem anonyme Umfragen und interaktive Fragen erstellt werden können.
+              „Buzz“-Beiträge können direkt in den Chats veröffentlicht oder extern geteilt werden, wo andere Personen ohne Konto abstimmen können, sofern dies erlaubt ist.
+              TellMe vereint somit Anonymität, temporäre Gruppen, Chat, Einladungen und Community-Interaktionen in einer modernen und responsiven Benutzeroberfläche.
+              Das Ziel ist es, den Nutzern zu ermöglichen, sich frei zu äußern, sich auszutauschen und schnell die Meinungen anderer einzuholen, während sie dabei anonym bleiben.</p>
+           <p> <span style={{color:'rgb(0, 217, 255)'}}>Link zum Projekt: <a href="https://tellmeall.vercel.app/">https://tellmeall.vercel.app/</a>  </span> </p>
+           <p><u>| Einzelprojekt |</u> </p>
+           <div >
+              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>Supabase, React.js, Typescript, Git, Vercel </span> </h3>
+           </div>
+           
+        </div>),
+    screenshots: [projectScreen16 ,projectScreen17,projectScreen18,projectScreen19 ]
   },
 
 ];
@@ -448,7 +475,7 @@ function ProjectModal({ project, index, total, onClose, t }) {
                   <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">{t.portfolio.screenshots}</h3>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-2 sm:grid-cols-4">
                   {project.screenshots.filter(Boolean).map((img, screenshotIndex) => (
                     <a key={screenshotIndex} href={img} target="_blank" rel="noreferrer" className="overflow-hidden rounded-xl border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
                       <img src={img} alt={`${project.title} Screenshot ${screenshotIndex + 1}`} className="h-auto w-full object-contain transition-transform duration-500 hover:scale-[1.02]" />
