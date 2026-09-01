@@ -32,6 +32,9 @@ import project13 from './assets/carcollection.png';
 import projectDemo13 from '/carcollectionDemo.mp4';
 import project14 from './assets/wscape.png'
 import projectDemo14 from '/wonderscape.mp4';
+import project15 from './assets/smcook.png'
+import projectDemo15 from '/smartcook.mp4';
+
 
 
 
@@ -43,11 +46,11 @@ const projects = [
     github: 'https://github.com/mansvell',
     description: (
         <div>
-           <h3>Diese Website stellt mein Portfolio dar und besteht aus 4 Teilen. es enthält meine Informationen, Zertifikate,
-              Lebenslauf und meine Projekte "sowohl Einzelprojekte als auch Teamprojekte"</h3>
+           <h3>Diese Website stellt mein Portfolio dar und besteht aus 3 Sprachen und ein Darkmodus. Hier haben Sie die Möglichkeit, meine persönlichen Informationen schnell zu finden und 
+             viel über mich zu lernen, meine Zertifikate zu finden, einen Überblick über meinen Werdegang zu haben und abschließend meine Projekte zu entdecken. </h3>
            <div >
             <p><u>| Persönliches Projekt |</u> </p>
-              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>React.js ,  CSS , html </span> </h3>
+              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>React.js ,  CSS , Html ,Javascript </span> </h3>
            </div> 
         </div>),
 
@@ -59,8 +62,8 @@ const projects = [
     github: 'https://github.com/mansvell/SmartSaveApp.git',
     description: (
         <div>
-           <p>SmartSaveApp ist eine AndroidApp ,die mit Bankkonto, Kreditkartenkonto oder Sparkonto verbunden ist und ermöglicht die Verwaltung von Sparzielen 
-             durch ein Sparkonto.Der User kann auch seine Umsätze kategorisieren und verwalten, also nach der Registrierung</p>
+           <p>SmartSaveApp ist eine Android-App ,die mit Bankkonto, Kreditkartenkonto oder Sparkonto verbunden ist und ermöglicht die Verwaltung von Sparzielen 
+             durch ein Sparkonto. Der Nutzer kann auch seine Umsätze kategorisieren und verwalten, also nach der Registrierung</p>
             <p><u>Vorlesung</u>: Android-Praktikum  |  (TeamArbeit-3Pers)<u>Bewertung des Projekts</u>: 100</p>
             <p><u>Meine Rollen</u>: Implementierung der Logik: 50% , Implementierung der UI :35% , Erstellung Roomdatenbank:50%</p>
            <div >
@@ -92,14 +95,39 @@ const projects = [
   },
   {
     id: 4,
+    title: 'SmartCook',
+    image: project15,
+    github: 'https://github.com/mansvell/smartcook.git',
+    description: (
+        <div>
+           <p>SmartCook ist eine intelligente Webanwendung zum Entdecken, Erstellen und Verwalten von Rezepten.
+              Sie bietet eine sichere Authentifizierung mit Registrierung, Anmeldung und Verwaltung eines persönlichen Profils.
+              Die Nutzer können Rezepte mit Zutaten, Portionen, Schwierigkeitsgrad, Zubereitungszeit und weiteren nützlichen Informationen einsehen.
+              Sie können ihre eigenen Rezepte erstellen, bearbeiten und löschen und haben dabei die Möglichkeit, diese öffentlich oder privat zu machen.
+              Ein Favoritensystem ermöglicht es, beliebte Rezepte ganz einfach zu speichern.
+              SmartCook integriert zudem eine künstliche Intelligenz (KI), um dem Nutzer Rezepte auf Basis seiner Restzutaten vorzuschalegen.
+              Die Anwendung umfasst schließlich eine wöchentliche Mahlzeitenplanung und ein Gamification-System, das die Aktivität des Nutzers belohnt.
+            </p>
+             <p><u>Vorlesung</u>: Software Engineering: Realisierung | (TeamArbeit-4Pers)<u>Bewertung des Projekts</u>: 100/100</p>
+            <p><u>Meine Rollen</u>: Backend(50% + KI-inklusiv) + Frontend(Willkommenseite, Alle Loginseiten, Startseite, KI-Seite, Favorisseite, Rezepteseite, Alle Profilseiten) </p>
+           <div >
+              <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>Supabase, React.js, i18n, Git, API_key, Vercel, Tailwind.CSS </span> </h3>
+           </div>
+           
+        </div>),
+    video: projectDemo15,
+    screenshots: [ , ]
+  },
+  {
+    id: 5,
     title: 'CarCollection',
     image: project13,
     github: 'https://github.com/mansvell/Car-Collection.git',
     description: (
         <div>
-           <p>Ich habe diese App entwickelt für alle Personnen ,die eine Leidenschaft für Autos haben. Dort können Sie alle Informartionen Von unterschiedlichen
-             und bekannten Automarken sehen und auch von beeindrcuckenden Autos. Vorschläge können User machen und like machen und ein Konto erstellen.
-             Sie hat auch ein Administratzor Sektion</p>
+           <p>Ich habe diese App entwickelt für alle Personen ,die eine Leidenschaft für Autos haben. Dort können Sie alle Informartionen Von unterschiedlichen
+             und bekannten Automarken sehen und auch von beeindrcuckenden Autos. Vorschläge können Nutzer machen ,Autos als Favorit hinzufügen und ein Konto erstellen.
+             Sie hat auch ein Administrator-Sektion, wo alle Statistiken einsehbar sind. </p>
              <p><u>| Persönliches Projekt |</u> </p>
             <p><u>Meine Rollen</u>: Backend + Frontend + Database</p>
            <div >
@@ -111,16 +139,17 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 5,
+    id: 6,
     title: 'Wonderscape',
     image: project14,
     github: 'https://github.com/mansvell/Wonderscape.git',
     description: ( 
         <div>  
-           <p>Wonderscape ist eine App, die wichtige Informationen über die Weltwunder, Landschaften, Monumente, bekannte Schlösser
-             und viel mehr übermitteln. Dies hilft dem Nutzer dabei ,sich nicht nur gründlich sondern auch schneller zu kultivieren.
-             Die Besonderheit bei dieser App ist ,dass sie 3 unterschiedlichen Sprachen (deutsch ,franzöisch, englisch) aufweist 
-             und besitzt auch einen ChatBot . </p>
+           <p>Wonderscape ist eine moderne Webanwendung, die dazu dient, die Welt, ihre bemerkenswerten Orte sowie ihre kulturelle und natürliche Vielfalt zu entdecken. 
+            Sie ermöglicht es, eine systematisch zusammengestellte Auswahl an Reisezielen in verschiedenen Kategorien zu erkunden: neue und alte Weltwunder, Denkmäler, Schlösser, Naturparadiese und Inseln. 
+            Der Nutzer kann die Orte auch nach Ländern entdecken, eine Auswahl der wichtigsten Sehenswürdigkeiten eines Landes einsehen 
+            oder die Funktion „Surprise Me“ nutzen, um spontan zu einem Reiseziel aufzubrechen.
+           </p>
             <p><u>| Persönliches Projekt |</u> </p>
            <div >
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}> Angular, OpenAI(Chatbot)</span> </h3>
@@ -130,7 +159,7 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 6,
+    id: 7,
     title: 'MJ-Shop',
     image: project4,
     github: 'https://github.com/mansvell/Webanwendung-MJ-Shop.git',
@@ -138,7 +167,7 @@ const projects = [
         <div>
            <p>Das Projekt besteht aus einer Datenbank, Frontend, Backend, Tests. In der App können Nutzer Account & Rezepte erstellen,
              Rezepte kommentieren & bewerten, in Favoritenliste und Einkaufsliste hinzufügen und löschen. </p>
-             <p><u>Vorlesung</u>: Informatik-projekt | (TeamArbeit-2Pers)<u>Bewertung des Projekts</u>: 82</p>
+             <p><u>Vorlesung</u>: Informatik-projekt | (TeamArbeit-4Pers)<u>Bewertung des Projekts</u>: 82</p>
             <p><u>Meine Rollen</u>: implementierung Frontend: 100%, implementierung BackEnd: 40%, Erstellung Datenbank:100% </p>
            <div >
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>JAVA , Vert.X, HTML5, CSS , Bootstrap, Handelbar, Javascript, Git, MySQL</span> </h3>
@@ -149,7 +178,7 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 7,
+    id: 8,
     title: 'Mini Game Arena',
     image: project5,
     github: 'https://github.com/mansvell/MiniGameArena.git',
@@ -167,7 +196,7 @@ const projects = [
   },
   
   {
-    id: 8,
+    id: 9,
     title: 'Fruchtninja',
     image: project6,
     github: 'https://github.com/mansvell/Frucht-Ninja-Spiel.git',
@@ -185,7 +214,7 @@ const projects = [
     screenshots: [ ],
   },
   {
-    id: 9,
+    id: 10,
     title: 'PokePong',
     image: project7,
     github: 'https://github.com/mansvell/Pokemon-Pong.git',
@@ -202,15 +231,15 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 10,
+    id: 11,
     title: 'Compiler',
     image: project8,
     github: 'https://github.com/mansvell/Compilerbau.git',
     description: (
         <div>
-           <p> In diesem Projekt habe ich einen Compiler für die kleine Programmiersprache "spl" gebaut.das Projekt besteht darin, 
+           <p> In diesem Projekt habe ich einen Compiler für die kleine Programmiersprache "spl" gebaut. Das Projekt besteht darin, 
                einen Compiler zu erstellen und in SPl-programmen zu testen. Zum Bestehen mindestens 60%. </p>
-           <p><u>Vorlesung:</u> Compilerbau | (Einzelprojekt)<u>Bestanden mit</u> 90%</p>
+           <p><u>Vorlesung:</u> Compilerbau | (Einzelprojekt) <u>Bestanden mit</u> 90%</p>
            <div >
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>JAVA, Kotlin, CUP, SPL</span> </h3>
            </div>
@@ -219,14 +248,14 @@ const projects = [
     screenshots:[projectScreen8  ] ,
   },
   {
-    id: 11,
+    id: 12,
     title: 'Ninja Virtuelle Maschine',
     image: project9,
     github: 'https://github.com/mansvell',
     description: (
         <div>
-           <p>in diesem Projekt habe ich eine Ninja virtuelle Maschine gebaut. Zum Bestehen mindestens 15. </p>
-           <p><u>Vorlesung:</u> Konzepte Systemnaher Programmierung | (Einzelprojekt)<u>Bestanden mit</u> 18/27 </p>
+           <p>In diesem Projekt habe ich eine Ninja virtuelle Maschine gebaut. Zum Bestehen mindestens 15. </p>
+           <p><u>Vorlesung:</u> Konzepte Systemnaher Programmierung | (Teamprojekt)<u>Bestanden mit</u> 18/27 </p>
            <div >
               <h3 ><u>Skills:</u> <span style={{color:'rgb(0, 217, 255)'}}>C# , Git</span> </h3>
            </div>
@@ -235,7 +264,7 @@ const projects = [
     screenshots:[ projectScreen9 ] ,
   },
   {
-    id: 12,
+    id: 13,
     title: 'Ibitak Collision',
     image: project10,
     github: 'https://github.com/mansvell/Ibitak-Kollision.git',
@@ -253,7 +282,7 @@ const projects = [
     screenshots: [ , ]
   },
   {
-    id: 13,
+    id: 14,
     title: 'LED Steuerung',
     image: project11,
     github: 'https://github.com/mansvell',
@@ -271,7 +300,7 @@ const projects = [
   },
   
   {
-    id: 14,
+    id: 15,
     title: 'Umrechnungshilfe',
     image: project12,
     github: 'https://github.com/mansvell/Umrechnungshilfe.git',
@@ -348,12 +377,10 @@ export default function Portfolio() {
                     )}
                   </div>
 
-                  <div className="flex items-center justify-between gap-2 p-2">
+                  <div className="flex items-center justify-center p-2">
                     <div className="min-w-0">
                       <h2 className="truncate text-base font-semibold">{project.title}</h2>
                     </div>
-
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border  text-lg text-neutral-500 transition-all duration-300 group-hover:border-red-600 group-hover:bg-red-600 group-hover:text-white dark:border-neutral-700 dark:text-neutral-300">↗</span>
                   </div>
                 </button>
 

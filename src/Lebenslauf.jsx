@@ -7,6 +7,7 @@ const education = [
     period: "04/2023 – HEUTE",
     institution: "Technische Hochschule Mittelhessen (THM)",
     details: [
+      "Software Engineering: Konzeption und Realisation",
       "Programmierung interaktiver Systeme (Java)",
       "Grundlagen der künstlichen Intelligenz (Python)",
       "Datenbanken (MariaDB, SQL, ERM)",
@@ -45,9 +46,10 @@ const experience = [
     period: "04/2023 – HEUTE",
     institution: "Technische Hochschule Mittelhessen",
     details: [
+      "PRAKTIKUM : Entwicklung eines Retrieval-Augmented-Generation-Systems ,das politische Dokumente analysiert, Vorgang im Zeitverlauf verfolgt, Frage zu einem bestimmten Dokument beantwortet und Dokument zusammenfasst. ",
+      "Entwicklung der Android-App SmartSaveApp zur Verwaltung von Sparzielen, Bankkonten und Sparkonten mit Kotlin und Jetpack Compose.",
       "Entwicklung der Webanwendung MJ-Shop zur Rezeptverwaltung mit Benutzerkonten und Rezeptmanagement. Frontend: HTML, CSS, JavaScript und Handlebars. Backend: Java und Vert.x.",
       "Entwicklung des Brettspiels Qawale im Team mit einem KI-Gegner unter Verwendung von Python und Pygame.",
-      "Entwicklung der Android-App SmartSaveApp zur Verwaltung von Sparzielen, Bankkonten und Sparkonten mit Kotlin und Jetpack Compose.",
       "Entwicklung mehrerer Videospiele mit Java, darunter Pokémon, Fruit Ninja, Pokéball und Vier Gewinnt, unter Verwendung einer MVC-Struktur.",
       "Aufbau einer virtuellen Maschine mit C#.",
       "Entwicklung eines Compilers mit Java, Kotlin und CUP.",

@@ -84,7 +84,7 @@ export const translations = {
             education: "Bildungsweg",
             experience: "Praktische Erfahrungen",
             professional: "Berufserfahrungen",
-            professionalEmpty: "Noch nicht. Tut mir leid",
+            professionalEmpty: "Kommt bald...",
             },
         portfolio: {
             eyebrow: "Projekte",
@@ -185,7 +185,7 @@ export const translations = {
             education: "Education",
             experience: "Practical experience",
             professional: "Professional experience",
-            professionalEmpty: "Not yet, sorry",
+            professionalEmpty: "Come soon...",
         },
         portfolio: {
             eyebrow: "Projects",
@@ -285,7 +285,7 @@ export const translations = {
         education: "Formation",
         experience: "Expériences pratiques",
         professional: "Expériences professionnelles",
-        professionalEmpty: "Pas encore, désolé",
+        professionalEmpty: "En Cours...",
         },
     portfolio: {
         eyebrow: "Projets",

@@ -86,7 +86,7 @@ export default function Zertifikate() {
       <footer className="relative z-10 mt-auto w-full">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 border-t border-neutral-200 px-5 py-5 text-xs text-neutral-400 dark:border-neutral-800 dark:text-neutral-500 sm:flex-row sm:px-8 lg:px-12">
           <span>© 2026 Mansvell Nkwanga</span>
-          <span>{t.footer.updated} · 27.08.2026</span>
+          <span>{t.footer.updated} · 01.09.2026</span>
         </div>
       </footer>
 

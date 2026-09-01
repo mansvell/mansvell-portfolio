@@ -4,13 +4,13 @@ const AppContext = createContext();
 
 export function AppProvider({ children }) {
   const [darkMode, setDarkMode] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("theme"); //Récupère la préférence sauvegardée (ex: "dark" ou "light")
 
     if (savedTheme) {
       return savedTheme === "dark";
     }
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches; //Détecte automatiquement le thème du système d'exploitation
   });
 
   const [language, setLanguage] = useState(
